@@ -23,7 +23,9 @@ app.use( express.json() )
 // Rutas
 // Todo lo que se exporta de routes/auth se habilitará en la ruta /api/auth
 app.use( '/api/auth', require( './routes/auth' ) )
-// TODO: CRUD: eventos
+
+// Eventos - ruta /api/events
+app.use( '/api/events', require( './routes/events' ) )
 
 // escuchar peticiones
 app.listen( process.env.PORT, () =>{
