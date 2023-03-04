@@ -9,7 +9,7 @@ const generateJWT = ( uid, name ) => {
       const payload = { uid, name }
       // generamos el token en base a un secreto y al payload
       jwt.sign( payload, process.env.SECRET_JWT_SEED, {
-         expiresIn: '365d'
+         expiresIn: '7d'
       }, ( err, token ) =>{
 
          if(err){

@@ -37,7 +37,7 @@ router.post(
    ], 
    createUser,
 )
-
+console.log(loginUser);
 router.get( '/renew', validateJWT, renewToken )
 
 module.exports = router 

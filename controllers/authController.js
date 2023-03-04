@@ -17,7 +17,7 @@ const createUser = async ( req, res = response ) => {
       if ( user ) {
          return res.status(400).json({
             ok: false,
-            msg:'El correo que ha utilizado está registrado'
+            msg:'El usuario ya está registrado'
          })
       }
       // hacemos una nueva instancia del modelo de usuario 
@@ -61,6 +61,8 @@ const renewToken = async( req, res = response ) => {
    res.json({
       ok: true, 
       token,
+      uid, 
+      name,
    })
 }
 
